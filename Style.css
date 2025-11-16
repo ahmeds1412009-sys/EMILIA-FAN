@@ -43,6 +43,8 @@
     .slink:hover{transform:translateY(-6px)}
     .slink svg{width:20px;height:20px;opacity:.95}
 
+
+.slink{color:white;}
     /* tint colors on hover */
     .slink[data-platform="youtube"]:hover{background:linear-gradient(90deg,#ff4b4b22,#ff000022);border-color:#ff4b4b}
     .slink[data-platform="twitch"]:hover{background:linear-gradient(90deg,#6b50ff22,#4b2fb922);border-color:#7a5cff}
