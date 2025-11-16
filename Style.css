@@ -47,10 +47,10 @@
 .slink{color:white;}
     /* tint colors on hover */
     .slink[data-platform="youtube"]:hover{background:linear-gradient(90deg,#ff4b4b22,#ff000022);border-color:#ff4b4b}
-    .slink[data-platform="twitch"]:hover{background:linear-gradient(90deg,#6b50ff22,#4b2fb922);border-color:#7a5cff}
+    .slink[data-platform="twitch"]:hover{background:linear-gradient(90deg,#6b50ff22,#4b2fb922);border-color:#9146ff}
     .slink[data-platform="tiktok"]:hover{background:linear-gradient(90deg,#20f6f622,#ff2bd622);border-color:#ff2bd6}
     .slink[data-platform="pinterest"]:hover{background:linear-gradient(90deg,#c9222222,#ff616122);border-color:#ff3b3b}
-    .slink[data-platform="discord"]:hover{background:linear-gradient(90deg,#7289da22,#99aaff22);border-color:#7289da}
+    .slink[data-platform="discord"]:hover{background:linear-gradient(90deg,#7289da22,#99aaff22);border-color:#9f8bf7}
 
     /* portrait */
     .portrait{display:flex;align-items:center;justify-content:center}
