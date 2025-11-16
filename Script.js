@@ -136,3 +136,10 @@ function createTouchSnow(e) {
     snow.remove();
   }, 700);
 }
+
+document.addEventListener('contextmenu', function(e) {
+    if(e.target.tagName === 'IMG') {
+        e.preventDefault(); // يمنع قائمة النقر باليمين على الصور
+        alert("التحميل غير مسموح");
+    }
+});
