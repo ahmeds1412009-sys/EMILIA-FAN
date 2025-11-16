@@ -103,3 +103,18 @@
   0% { transform: translateY(0) scale(1); opacity: 1; }
   100% { transform: translateY(20px) scale(0.4); opacity: 0; }
 }
+
+img {
+    -webkit-user-drag: none;  /* كروم و سفاري */
+    -khtml-user-drag: none;
+    -moz-user-drag: none;     /* فايرفوكس */
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+.div-image {
+    width: 300px;
+    height: 200px;
+    background-image: url('your-image.jpg');
+    background-size: cover;
+}
