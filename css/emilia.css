@@ -1,0 +1,97 @@
+/* -----------------------------
+   EMILIA SPRITE STYLES
+------------------------------ */
+
+.emilia {
+  position: fixed;
+  bottom: 70px;
+  left: 30px;
+  width: 140px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 999;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  pointer-events: auto;
+}
+
+/* default */
+.emilia.idle {
+  background-image: url("../assets/images/emilia/idle_emilia.png");
+  animation: idleAnim 1s steps(6) infinite;
+}
+
+/* welcome */
+.emilia.welcome {
+  background-image: url("../assets/images/emilia/welcome_emilia.png");
+  animation: welcomeAnim 1s steps(6) 1;
+}
+
+/* walk */
+.emilia.walk {
+  background-image: url("../assets/images/emilia/walk_emilia.png");
+  animation: walkAnim 0.9s steps(8) infinite;
+}
+
+/* sleep */
+.emilia.sleep {
+  background-image: url("../assets/images/emilia/sleep_emilia.png");
+  animation: sleepAnim 1s steps(4) infinite;
+}
+
+/* eat */
+.emilia.eat {
+  background-image: url("../assets/images/emilia/eat_emilia.png");
+  animation: eatAnim 1s steps(6) 1;
+}
+
+/* angry */
+.emilia.angry {
+  background-image: url("../assets/images/emilia/angry_emilia.png");
+  animation: angryAnim 1s steps(6) 1;
+}
+
+/* run */
+.emilia.run {
+  background-image: url("../assets/images/emilia/speed_emilia.png");
+  animation: runAnim 0.8s steps(8) infinite;
+}
+
+/* laugh */
+.emilia.laugh {
+  background-image: url("../assets/images/emilia/happy_emilia.png");
+  animation: laughAnim 1s steps(6) 1;
+}
+
+/* ANIMATIONS */
+@keyframes idleAnim { to { background-position: 100% 0; } }
+@keyframes welcomeAnim { to { background-position: 100% 0; } }
+@keyframes walkAnim { to { background-position: 100% 0; } }
+@keyframes sleepAnim { to { background-position: 100% 0; } }
+@keyframes eatAnim { to { background-position: 100% 0; } }
+@keyframes angryAnim { to { background-position: 100% 0; } }
+@keyframes runAnim { to { background-position: 100% 0; } }
+@keyframes laughAnim { to { background-position: 100% 0; } }
+
+/* prevent copy */
+.emilia img, .emilia {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* shadow */
+.emilia::after {
+  content: "";
+  position: absolute;
+  inset: auto 20px 8px 20px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  filter: blur(4px);
+  z-index: -1;
+}

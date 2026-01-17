@@ -1,0 +1,83 @@
+/* ================== المتغيرات ================== */
+:root {
+  --text-main: #ffffff;
+  --muted: #cfd8ff;
+  --accent: #8fd3ff;
+  --glass: rgba(255,255,255,0.12);
+}
+
+/* ================== منع النسخ والسحب ================== */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+button, a {
+  pointer-events: auto;
+}
+
+/* ================== إعدادات عامة ================== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #000;
+  position: relative;
+}
+
+/* ================== خلفيات حسب الوقت ================== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2; /* الخلفية تحت */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.95);
+  transition: background-image 1s ease-in-out;
+}
+
+/* الصبح */
+body.day::after {
+  background-image: url("../assets/images/theme/day.jpg");
+}
+
+/* بليل */
+body.night::after {
+  background-image: url("../assets/images/theme/night1.jpg");
+}
+
+/* ================== Canvas التلج ================== */
+#fxCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* فوق الخلفية */
+  pointer-events: none;
+}
+
+/* ================== حاوية عامة ================== */
+.wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+/* تأثير زجاجي */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+}

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta name="discription" content="بَينّ هَمسات الّصقيع تُوجد فَتاه لطيفّة تُحب الأخرين والخير لهم ☃️ قامت بإنشاء موقع خاص بها لإجاد جميع روابط إيميليا 🌨️" />
+  <meta name="keywords" content="EMILIA , EMY , EMIL , EMI , EMZ , EMIZ , EMILLIADESS , emilia , emiliadess , emi , emy , emil , emili , emila , إيميليا , ايميليا , ايميليادس , إيميليادس , ايمي , ايمز , امليا , اميليا , ايمليا , ايميلي , ايمليا , Emili , emyli , emily , emilia , email , aml , amal , amalia , amilia , em , e , amile" />
+  <meta name="author" content="emilia-vtuber , emilia" />
+  <meta http-equiv="Content-language" content="ar" />
+  <meta rel="canonical" href="https://emilia-vtuber.netlify.app" />
+  <meta property="og:title" content="EMILIA" />
+  <meta property="og:description" content="❄️ فتاة جميله رقيقه 💙 قامت بصنع موقع تعريفي لها و يوجد بها مواقع التواصل" />
+  <meta property="og:image" content="https://3.files.edl.io/bf52/25/01/08/221430-e3ea869e-dcd9-45a0-ae4c-f726ddb14a8b.png" />
+  <meta property="og:url" content="https://emilia-vtuber.netlify.app" />
+  <meta property="og:type" content="website" />
+  <meta name="site-owner" content="Emilia" />
+  <meta name="app-name" content="EMILIA" />
+  <meta name="app-version" content="1.0.0" />
+  <meta name="app-build" content="001" />
+  <meta name="app-owner" content="Emilia" />
+  <meta name="app-team" content="Emilia Management Team" />
+  <meta name="app-developer" content="HASHO" />
+  <meta name="app-make-date" content="2025-8-15" />
+  <meta name="app-once-update" content="2025-11-17" />
+  <meta name="app-last-update" content="2026-1-15" />
+  <meta name="app-release-date" content="2026-1-17" />
+  <meta name="app-status" content="production" />
+  <meta name="app-category" content="personal-profile" />
+  <meta name="app-note" content="Soon...." />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>EMILIA | DESIGNERS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/designers.css">
+  <link rel="stylesheet" href="css/theme.css">
+
+  <style>/* زر الثلج */
+.snow-menu-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; }
+.snow-button { width:50px; height:50px; background:linear-gradient(135deg,#1f6feb,#6f4df0); border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:24px; color:white; box-shadow:0 8px 20px rgba(0,0,0,0.6); transition:0.2s; }
+.snow-button:hover { transform: scale(1.2); box-shadow:0 12px 28px rgba(0,0,0,0.7); }
+
+.snow-dropdown {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background: rgba(30,30,50,0.95);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.snow-dropdown a {
+  padding: 10px 20px;
+  color: #eaf0ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.snow-dropdown a:hover { background: linear-gradient(90deg,#6f4df0,#1f6feb); color:white; }
+
+/* Mode button */
+.mode-container { position: relative; }
+.mode-button {
+  padding: 10px 20px;
+  background: #444466;
+  cursor: pointer;
+  color: #eaf0ff;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.mode-button:hover { background: #6f4df0; }
+
+/* Mode dropdown */
+.mode-dropdown {
+  position: absolute;
+  bottom: 40px; left: 0;
+  display: none;
+  flex-direction: column;
+  background: rgba(50,50,70,0.95);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mode-option {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #eaf0ff;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.mode-option:hover { background: #1f6feb; color: white; }
+
+/* -----------------------------
+   EMILIA SPRITE STYLES
+------------------------------ */
+
+.emilia {
+  position: fixed;
+  bottom: 70px;
+  left: 30px;
+  width: 140px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 999;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  pointer-events: auto;
+}
+
+/* default */
+.emilia.idle {
+  background-image: url("./assets/images/emilia/idle_emilia.png");
+  animation: idleAnim 1s steps(6) infinite;
+}
+
+/* welcome */
+.emilia.welcome {
+  background-image: url("./assets/images/emilia/welcome_emilia.png");
+  animation: welcomeAnim 1s steps(6) 1;
+}
+
+/* walk */
+.emilia.walk {
+  background-image: url("./assets/images/emilia/walk_emilia.png");
+  animation: walkAnim 0.9s steps(8) infinite;
+}
+
+/* sleep */
+.emilia.sleep {
+  background-image: url("./assets/images/emilia/sleep_emilia.png");
+  animation: sleepAnim 1s steps(4) infinite;
+}
+
+/* eat */
+.emilia.eat {
+  background-image: url("./assets/images/emilia/eat_emilia.png");
+  animation: eatAnim 1s steps(6) 1;
+}
+
+/* angry */
+.emilia.angry {
+  background-image: url("./assets/images/emilia/angry_emilia.png");
+  animation: angryAnim 1s steps(6) 1;
+}
+
+/* run */
+.emilia.run {
+  background-image: url("./assets/images/emilia/speed_emilia.png");
+  animation: runAnim 0.8s steps(8) infinite;
+}
+
+/* laugh */
+.emilia.laugh {
+  background-image: url("./assets/images/emilia/happy_emilia.png");
+  animation: laughAnim 1s steps(6) 1;
+}
+
+/* ANIMATIONS */
+@keyframes idleAnim { to { background-position: 100% 0; } }
+@keyframes welcomeAnim { to { background-position: 100% 0; } }
+@keyframes walkAnim { to { background-position: 100% 0; } }
+@keyframes sleepAnim { to { background-position: 100% 0; } }
+@keyframes eatAnim { to { background-position: 100% 0; } }
+@keyframes angryAnim { to { background-position: 100% 0; } }
+@keyframes runAnim { to { background-position: 100% 0; } }
+@keyframes laughAnim { to { background-position: 100% 0; } }
+
+/* prevent copy */
+.emilia img, .emilia {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* shadow */
+.emilia::after {
+  content: "";
+  position: absolute;
+  inset: auto 20px 8px 20px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  filter: blur(4px);
+  z-index: -1;
+}
+
+</style>
+</head>
+<body>
+  <div class="theme-overlay"></div>
+
+  <!-- Header -->
+  <header class="wrap">
+    <div class="logo">
+      <img src="assets/images/main/emilai-avatar.jpg" alt="Emilia Logo">
+      <h2>Emilia</h2>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="wrap hero">
+    <div>
+      <h1 class="hero"> </br> ─────── ❆ ❄ ❆ ─────── 
+      </br>  Designs By Creators And Fans
+    </br> ─────── ❆ ❄ ❆ ───────
+      </h1>
+      <p class="designers-subtitle">
+ 𓂃❄️ Celebrating Emilia's top designers and showcasing their work.❄️𓂃
+</p>
+    </div>
+  </section>
+
+  <!-- Designers Gallery -->
+  <section class="wrap gallery" id="designers-gallery">
+    <div class="portrait">
+      <div class="card">
+        <img src="assets/images/designers/emilia-des-taven.jpg" alt="Designer 1">
+        <div class="name-tag">Designer: Taven</div>
+        <canvas class="snow-layer"></canvas>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="card">
+        <img src="assets/images/designers/emilia-des-nagwa.jpg" alt="Designer 2">
+        <div class="name-tag">Designer: Nagwa</div>
+        <canvas class="snow-layer"></canvas>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="card">
+        <img src="assets/images/designers/emilia-des-nan nan.png" alt="Designer 3">
+        <div class="name-tag">Designer: Bun Bun</div>
+        <canvas class="snow-layer"></canvas>
+      </div>
+    </div>
+  </section>
+
+   <!-- زر الثلج -->
+<div class="snow-menu-container">
+  <div class="snow-button">❄️</div>
+  
+  <!-- القائمة الرئيسية -->
+  <div class="snow-dropdown">
+    <a href="main.html">EMILIA</a>
+    <a href="games.html">GAMES</a>
+    <a href="designers.html">DESIGNERS</a>
+    
+    <!-- زر Mode -->
+    <div class="mode-container">
+      <div class="mode-button">Mode</div>
+      <div class="mode-dropdown">
+        <div class="mode-option" data-mode="light">White</div>
+        <div class="mode-option" data-mode="dark">Dark</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emilia idle"></div>
+
+  <!-- Footer -->
+  <footer class="wrap">
+    © EMILIA — VETUBER & ART | تم التصميم خصيصًا
+  </br>
+  EMILIA جميع الحقوق محفوظة © 2025 
+  </footer>
+  <canvas id="fxCanvas"></canvas>
+
+  <script src="js/main.js"></script>
+  <script src="js/designers.js"></script>
+  <script src="js/theme.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.snow-button');
+  const menu = document.querySelector('.snow-dropdown');
+
+  btn.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  document.addEventListener('click', (e) => {
+    if(!btn.contains(e.target) && !menu.contains(e.target)){
+      menu.style.display = 'none';
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const snowBtn = document.querySelector('.snow-button');
+  const dropdown = document.querySelector('.snow-dropdown');
+  const modeBtn = document.querySelector('.mode-button');
+  const modeDropdown = document.querySelector('.mode-dropdown');
+  const modeOptions = document.querySelectorAll('.mode-option');
+
+  // فتح القائمة الرئيسية
+  snowBtn.addEventListener('click', (e) => {
+    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    e.stopPropagation();
+  });
+
+  // فتح قائمة Mode
+  modeBtn.addEventListener('click', (e) => {
+    modeDropdown.style.display = modeDropdown.style.display === 'flex' ? 'none' : 'flex';
+    e.stopPropagation();
+  });
+
+  // إخفاء القوائم لو ضغطت بره
+  document.addEventListener('click', () => {
+    dropdown.style.display = 'none';
+    modeDropdown.style.display = 'none';
+  });
+
+  // تبديل بين White و Dark Mode
+  modeOptions.forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      const mode = e.target.dataset.mode;
+      if(mode === 'dark'){
+         document.documentElement.style.setProperty('--bg1', '#0c0397');
+        document.documentElement.style.setProperty('--bg2', '#0e0250');
+        document.documentElement.style.setProperty('--text', '#010611');
+      } else {
+        document.documentElement.style.setProperty('--bg1', '#50a3e7');
+        document.documentElement.style.setProperty('--bg2', '#0856cc');
+        document.documentElement.style.setProperty('--text', '#f5f1f1');
+      }
+      modeDropdown.style.display = 'none'; // أغلق القائمة بعد التغيير
+    });
+  });
+});
+
+
+
+// ===========================
+// EMILIA JS (FINAL)
+// ===========================
+
+const emilia = document.querySelector(".emilia");
+
+// ---- audio ----
+const audio = {
+  welcome: new Audio("../assets/welcome.mp3"),
+  angry: new Audio("../assets/angry.mp3"),
+  laugh: new Audio("../assets/laugh.mp3"),
+};
+
+// ---- state ----
+let state = "idle";
+let lastTouch = Date.now();
+let idleTimer = null;
+let sleepTimer = null;
+let walkTimer = null;
+let angryTimer = null;
+let runTimer = null;
+let laughTimer = null;
+
+// ---- prevent multiple states ----
+function setState(newState) {
+  if (state === newState) return;
+
+  emilia.className = "emilia " + newState;
+  state = newState;
+}
+
+// ---- welcome on load ----
+window.addEventListener("load", () => {
+  setState("welcome");
+  audio.welcome.play();
+
+  setTimeout(() => {
+    setState("idle");
+    startIdleTimer();
+  }, 2000);
+});
+
+// ---- idle timer ----
+function startIdleTimer() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    randomWalk();
+  }, 8000);
+}
+
+// ---- random walk ----
+function randomWalk() {
+  setState("walk");
+
+  // walk for random duration
+  const duration = 2000 + Math.random() * 3000;
+
+  walkTimer = setTimeout(() => {
+    setState("idle");
+    startIdleTimer();
+  }, duration);
+
+  // move randomly on screen
+  const x = Math.random() * (window.innerWidth - 150);
+  const y = Math.random() * (window.innerHeight - 150);
+
+  emilia.style.transition = "all 2s ease";
+  emilia.style.left = x + "px";
+  emilia.style.top = y + "px";
+}
+
+// ---- sleep after 5 minutes of inactivity ----
+function startSleepTimer() {
+  clearTimeout(sleepTimer);
+  sleepTimer = setTimeout(() => {
+    setState("sleep");
+  }, 300000);
+}
+
+// ---- eat random once ----
+function randomEat() {
+  setState("eat");
+  setTimeout(() => setState("idle"), 1400);
+}
+
+// ---- angry reaction ----
+function angryReaction() {
+  setState("angry");
+  audio.angry.play();
+  setTimeout(() => setState("idle"), 1400);
+}
+
+// ---- run reaction ----
+function runReaction() {
+  setState("run");
+
+  // move fast away
+  const x = Math.random() * (window.innerWidth - 150);
+  const y = Math.random() * (window.innerHeight - 150);
+
+  emilia.style.transition = "all 0.6s ease";
+  emilia.style.left = x + "px";
+  emilia.style.top = y + "px";
+
+  runTimer = setTimeout(() => {
+    setState("idle");
+    startIdleTimer();
+  }, 1800);
+}
+
+// ---- laugh reaction ----
+function laughReaction() {
+  setState("laugh");
+  audio.laugh.play();
+  setTimeout(() => setState("idle"), 1200);
+}
+
+// ---- drag and move ----
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+emilia.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - emilia.getBoundingClientRect().left;
+  offsetY = e.clientY - emilia.getBoundingClientRect().top;
+  emilia.style.cursor = "grabbing";
+  clearAllTimers();
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  const x = e.clientX - offsetX;
+  const y = e.clientY - offsetY;
+
+  emilia.style.left = Math.max(0, Math.min(window.innerWidth - 140, x)) + "px";
+  emilia.style.top = Math.max(0, Math.min(window.innerHeight - 140, y)) + "px";
+});
+
+document.addEventListener("mouseup", () => {
+  if (!isDragging) return;
+  isDragging = false;
+  emilia.style.cursor = "grab";
+  startIdleTimer();
+  startSleepTimer();
+});
+
+emilia.addEventListener("click", () => {
+  laughReaction();
+  lastTouch = Date.now();
+  clearAllTimers();
+  startIdleTimer();
+  startSleepTimer();
+});
+
+// ---- touch support ----
+emilia.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  const touch = e.touches[0];
+  offsetX = touch.clientX - emilia.getBoundingClientRect().left;
+  offsetY = touch.clientY - emilia.getBoundingClientRect().top;
+  clearAllTimers();
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+  const touch = e.touches[0];
+  const x = touch.clientX - offsetX;
+  const y = touch.clientY - offsetY;
+
+  emilia.style.left = Math.max(0, Math.min(window.innerWidth - 140, x)) + "px";
+  emilia.style.top = Math.max(0, Math.min(window.innerHeight - 140, y)) + "px";
+});
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+  startIdleTimer();
+  startSleepTimer();
+});
+
+// ---- clear all timers ----
+function clearAllTimers() {
+  clearTimeout(idleTimer);
+  clearTimeout(sleepTimer);
+  clearTimeout(walkTimer);
+  clearTimeout(runTimer);
+}
+
+// ---- random events ----
+setInterval(() => {
+  if (state !== "idle") return;
+
+  const rand = Math.random();
+  if (rand < 0.1) randomEat();
+  else if (rand < 0.2) laughReaction();
+}, 20000);
+
+// ---- angry if spam click (dragging) ----
+let clickCount = 0;
+setInterval(() => {
+  clickCount = 0;
+}, 2000);
+
+emilia.addEventListener("mousedown", () => {
+  clickCount++;
+  if (clickCount >= 8) {
+    angryReaction();
+    clickCount = 0;
+  }
+});
+
+// ---- sleep timer start ----
+startSleepTimer();
+startIdleTimer();
+
+</script>
+
+</body>
+</html>

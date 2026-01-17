@@ -1,0 +1,208 @@
+/* ================== خلفيات حسب الوقت ================== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2; /* الخلفية تحت */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.95);
+  transition: background-image 1s ease-in-out;
+}
+
+/* الصبح */
+body.day::after {
+  background-image: url("../assets/images/theme/day.jpg");
+}
+
+/* بليل */
+body.night::after {
+  background-image: url("../assets/images/theme/night1.jpg");
+}
+
+#fxCanvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* عشان ما يأثرش على أي تفاعل */
+  z-index: -1; /* تحت باقي العناصر */
+}
+
+:root{
+      --bg1:#07112a;
+      --bg2:#0d2340; /* deep blue */
+      --accent:#1f6feb; /* blue accent */
+      --accent-2:#6f4df0; /* purple-blue */
+      --glass: rgba(255,255,255,0.06);
+      --text: #eaf0ff;
+      --muted: rgba(234,240,255,0.75);
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(1200px 600px at 10% 20%, #06203a 0%, transparent 25%), linear-gradient(180deg, var(--bg1), var(--bg2));
+      color:var(--text);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* container */
+    .wrap{max-width:1100px;margin:0 auto;padding:40px 20px;position:relative;z-index:5}
+
+    /* header / nav */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:56px;height:56px;border-radius:10px;object-fit:cover;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .logo h2{margin:0;font-size:20px;letter-spacing:2px}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding-top:30px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:14px}}
+
+    .hero-left{padding:18px}
+    .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,var(--accent-2),var(--accent));font-weight:600;color:white;margin-bottom:12px}
+    h1{font-size:54px;margin:6px 0 6px;line-height:0.95}
+    @media(max-width:900px){h1{font-size:40px;text-align:center}}
+    .subtitle{opacity:.9;font-size:18px;margin-bottom:18px}
+    .bio{background:var(--glass);padding:14px;border-radius:14px;backdrop-filter: blur(6px);box-shadow:0 4px 20px rgba(0,0,0,0.6)}
+    
+    /* socials */
+    .socials{display:flex;gap:12px;margin-top:14px}
+    .slink{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);cursor:pointer;transition:transform .18s ease, background .2s}
+    .slink:hover{transform:translateY(-6px)}
+    .slink svg{width:20px;height:20px;opacity:.95}
+
+
+.slink{color:white;}
+    /* tint colors on hover */
+    .slink[data-platform="youtube"]:hover{background:linear-gradient(90deg,#ff4b4b22,#ff000022);border-color:#ff4b4b}
+    .slink[data-platform="twitch"]:hover{background:linear-gradient(90deg,#6b50ff22,#4b2fb922);border-color:#9146ff}
+    .slink[data-platform="tiktok"]:hover{background:linear-gradient(90deg,#20f6f622,#ff2bd622);border-color:#ff2bd6}
+    .slink[data-platform="pinterest"]:hover{background:linear-gradient(90deg,#c9222222,#ff616122);border-color:#ff3b3b}
+    .slink[data-platform="discord"]:hover{background:linear-gradient(90deg,#7289da22,#99aaff22);border-color:#9f8bf7}
+
+    /* portrait */
+    .portrait{display:flex;align-items:center;justify-content:center}
+    .portrait .card{width:360px;height:520px;border-radius:20px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 18px 60px rgba(6,18,50,0.7);position:relative;overflow:visible;padding:18px}
+    .portrait img{width:100%;height:auto;border-radius:12px;display:block;object-fit:cover}
+    .portrait .name-tag{position:absolute;left:18px;bottom:24px;background:linear-gradient(90deg,var(--accent-2),var(--accent));padding:8px 14px;border-radius:12px;font-weight:700;color:white}
+
+    /* snow overlay for portrait */
+    .portrait .snow-layer{position:absolute;inset:0;pointer-events:none}
+
+    /* gallery */
+    .gallery{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+    .gallery img{width:calc(33.333% - 8px);border-radius:10px;object-fit:cover}
+    @media(max-width:900px){.gallery img{width:calc(50% - 8px)}}
+
+    /* footer */
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* small interactive snow & lightning canvas */
+    #fxCanvas{position:fixed;inset:0;pointer-events:none;z-index:1}
+
+    /* link hover snow glow */
+    .slink .label{font-weight:600}
+
+    /* floating sparkle */
+    .sparkle{position:absolute;width:14px;height:14px;border-radius:50%;filter:blur(6px);opacity:0.9}
+
+        /* subtle page animations */
+    .fade-up{opacity:0;transform:translateY(12px);animation:fadeup .7s forwards}
+    .delay-1{animation-delay:.12s}.delay-2{animation-delay:.18s}.delay-3{animation-delay:.24s}
+    @keyframes fadeup{to{opacity:1;transform:none}}
+
+    /* accessibility focus */
+    a:focus, button:focus{outline:3px solid rgba(255,255,255,0.08);outline-offset:3px}
+    
+    
+    /* تأثير الثلج عند اللمس */
+.touch-snow {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.9;
+  animation: touchSnow 0.7s linear forwards;
+}
+
+@keyframes touchSnow {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(20px) scale(0.4); opacity: 0; }
+}
+
+img {
+    -webkit-user-drag: none;  /* كروم و سفاري */
+    -khtml-user-drag: none;
+    -moz-user-drag: none;     /* فايرفوكس */
+    -o-user-drag: none;
+}
+
+.div-image {
+    width: 300px;
+    height: 200px;
+    background-image: url('your-image.jpg');
+    background-size: cover;
+}
+
+/* زر الثلج */
+.snow-menu-container { position: fixed; bottom: 20px; left: 20px; z-index: 1000; }
+.snow-button { width:50px; height:50px; background:linear-gradient(135deg,#1f6feb,#6f4df0); border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:24px; color:white; box-shadow:0 8px 20px rgba(0,0,0,0.6); transition:0.2s; }
+.snow-button:hover { transform: scale(1.2); box-shadow:0 12px 28px rgba(0,0,0,0.7); }
+
+.snow-dropdown {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background: rgba(30,30,50,0.95);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.snow-dropdown a {
+  padding: 10px 20px;
+  color: #eaf0ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.snow-dropdown a:hover { background: linear-gradient(90deg,#6f4df0,#1f6feb); color:white; }
+
+/* Mode button */
+.mode-container { position: relative; }
+.mode-button {
+  padding: 10px 20px;
+  background: #444466;
+  cursor: pointer;
+  color: #eaf0ff;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.mode-button:hover { background: #6f4df0; }
+
+/* Mode dropdown */
+.mode-dropdown {
+  position: absolute;
+  bottom: 40px; left: 0;
+  display: none;
+  flex-direction: column;
+  background: rgba(50,50,70,0.95);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mode-option {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #eaf0ff;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.mode-option:hover { background: #1f6feb; color: white; }

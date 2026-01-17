@@ -1,0 +1,66 @@
+/* ===== Designers Page Specific ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.portrait .card {
+  width: 300px;
+  height: 420px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.02);
+  box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: relative;
+  padding: 14px;
+  transition: transform 0.3s ease;
+}
+
+.portrait .card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.portrait img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.portrait .name-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #1f6feb;
+  color: white;
+  font-weight: 600;
+}
+
+
+
+.slink .label {
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  justify-content: center; /* يحط المحتوى في المنتصف أفقياً */
+  align-items: center;     /* يحط المحتوى في المنتصف رأسياً */
+  flex-direction: column;  /* لو فيه أكثر من عنصر */
+}
+
+
+
+.designers-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #eaf0ff; /* أو أي لون يناسب التصميم */
+  text-align: center;
+  margin-top: 6px;
+}
+
