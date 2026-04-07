@@ -1,0 +1,246 @@
+/* ============================================================
+   EMILIA — main.css  (index page specific)
+   ============================================================ */
+
+/* ── Hero Section ── */
+.hero-section {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-2);
+  background: var(--glass-2);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--ice-2);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  text-shadow: 0 0 60px rgba(79,180,255,0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--ice-1);
+  opacity: 0.85;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.hero-bio {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 32px;
+  max-width: 440px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Socials ── */
+.socials-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--glass);
+  color: var(--ice-1);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+.social-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.social-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,10,30,0.5), 0 0 20px rgba(79,180,255,0.2);
+}
+.social-btn[data-p="youtube"]:hover  { border-color: #ff4b4b; background: rgba(255,75,75,0.08); color: #ff7070; }
+.social-btn[data-p="twitch"]:hover   { border-color: #9146ff; background: rgba(145,70,255,0.08); color: #b985ff; }
+.social-btn[data-p="pinterest"]:hover{ border-color: #e60023; background: rgba(230,0,35,0.08); color: #ff5a6e; }
+.social-btn[data-p="discord"]:hover  { border-color: #7289da; background: rgba(114,137,218,0.08); color: #99aaff; }
+.social-btn[data-p="instagram"]:hover  { border-color: #5851DB; background:  rgba(200, 153, 253, 0.08); color: #C13584; }
+
+/* ── Portrait ── */
+.hero-portrait { display: flex; justify-content: center; align-items: center; }
+
+.portrait-wrapper {
+  position: relative;
+  width: 340px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* glow rings */
+.glow-ring {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(79,180,255,0.18);
+  animation: rotateGlow 12s linear infinite;
+}
+.glow-ring-2 {
+  inset: -40px;
+  border-color: rgba(79,180,255,0.08);
+  animation-duration: 20s;
+  animation-direction: reverse;
+  border-style: dashed;
+}
+.glow-ring::before, .glow-ring::after {
+  content: '❄';
+  position: absolute;
+  font-size: 0.7rem;
+  color: var(--ice-3);
+  opacity: 0.7;
+}
+.glow-ring::before { top: 0; left: 50%; transform: translate(-50%,-50%); }
+.glow-ring::after  { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+
+/* sparkle particles */
+.sparkle-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+.sp {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--ice-2);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--ice-3);
+  animation: sparkleFloat var(--dur, 4s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes sparkleFloat {
+  0%,100% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50%      { transform: translateY(-20px) scale(1.4); opacity: 0.3; }
+}
+
+.portrait-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  animation: float 5s ease-in-out infinite;
+  border-color: var(--border-2);
+  box-shadow: 0 0 60px rgba(79,180,255,0.15), var(--shadow);
+}
+.portrait-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.portrait-card .snow-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.name-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, rgba(31,143,255,0.85), rgba(0,100,200,0.85));
+  border: 1px solid var(--border-2);
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: white;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 20px rgba(79,180,255,0.3);
+  white-space: nowrap;
+}
+
+/* ── Stats Section ── */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: var(--r-md);
+  transition: var(--transition);
+}
+.stat-card:hover { transform: translateY(-6px); }
+.stat-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.stat-val {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--ice-1), var(--ice-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-lbl {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 20px;
+  }
+  .hero-portrait { order: -1; }
+  .portrait-wrapper { width: 260px; height: 360px; }
+  .hero-title { font-size: 3rem; text-align: center; }
+  .hero-badge { display: block; text-align: center; }
+  .hero-bio { max-width: 100%; }
+  .socials-row { justify-content: center; }
+  .stats-section { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .stats-section { grid-template-columns: 1fr 1fr; }
+  .portrait-wrapper { width: 220px; height: 300px; }
+}

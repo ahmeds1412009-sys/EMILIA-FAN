@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>EMILIA | Games ❄️</title>
+  <link rel="icon" type="image/png" href="https://yt3.googleusercontent.com/-QebyNntGPWEnEyb9zYM9s4a-eV93bVIOzvz_KxXEPC-KBo7e5yPEMP4HvT7npXdTom_50n6wg=s900-c-k-c0x00ffffff-no-rj">
+    <meta name="discription" content="بَينّ هَمسات الّصقيع تُوجد فَتاه لطيفّة تُحب الأخرين والخير لهم ☃️ قامت بإنشاء موقع خاص بها لإجاد جميع روابط إيميليا 🌨️" />
+  <meta name="keywords" content="EMILIA , EMY , EMIL , EMI , EMZ , EMIZ , EMILLIADESS , emilia , emiliadess , emi , emy , emil , emili , emila , إيميليا , ايميليا , ايميليادس , إيميليادس , ايمي , ايمز , امليا , اميليا , ايمليا , ايميلي , ايمليا , Emili , emyli , emily , emilia , email , aml , amal , amalia , amilia , em , e , amile , vtuber emilia , emilia vtuber , emilidess vtuber , vtuber emiliadess , email youtuber , email youtube , emila youtube , emaila youtuber , فيتيوبر ايميليا, ايميليا فيتيوبر , يوتيوب ايمليا , يوتيوبر ايميليا " />
+  <meta name="author" content="emilia-vtuber , emilia" />
+  <meta http-equiv="Content-language" content="ar" />
+  <meta rel="canonical" href="https://emilia-vtuber.netlify.app" />
+  <meta property="og:title" content="EMILIA" />
+  <meta property="og:description" content="❄️ فتاة جميله رقيقه 💙 قامت بصنع موقع تعريفي لها و يوجد بها مواقع التواصل" />
+  <meta property="og:image" content="https://yt3.googleusercontent.com/-QebyNntGPWEnEyb9zYM9s4a-eV93bVIOzvz_KxXEPC-KBo7e5yPEMP4HvT7npXdTom_50n6wg=s900-c-k-c0x00ffffff-no-rj" />
+  <meta property="og:url" content="https://emilia-vtuber.netlify.app" />
+  <meta property="og:type" content="website" />
+  <meta name="site-owner" content="Emilia" />
+  <meta name="app-name" content="EMILIA" />
+  <meta name="app-version" content="1.0.0" />
+  <meta name="app-build" content="001" />
+  <meta name="app-owner" content="Emilia" />
+  <meta name="app-team" content="Emilia Management Team" />
+  <meta name="app-developer" content="HASHO" />
+  <meta name="app-make-date" content="2025-8-15" />
+  <meta name="app-once-update" content="2025-11-17" />
+  <meta name="app-last-update" content="2026-4-6" />
+  <meta name="app-release-date" content="2026-1-17" />
+  <meta name="app-status" content="production" />
+  <meta name="app-category" content="personal-profile" />
+  <meta name="app-note" content="Soon...." />
+  <meta name="description" content="ألعاب إيميليا — شاهد جميع ألعاب إيميليا على يوتيوب"/>
+  <meta property="og:title" content="EMILIA | Games"/>
+  <meta property="og:url" content="https://emilia-vtuber.netlify.app/games.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/games.css">
+</head>
+<body class="night">
+
+<!-- ═══ LOADER ═══ -->
+<div id="loader">
+  <div class="loader-flakes">❆ ❄ ❆</div>
+  <div class="loader-logo">GAMES</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- ═══ CURSORS ═══ -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ═══ SNOW CANVAS ═══ -->
+<canvas id="fxCanvas"></canvas>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" id="site-header">
+  <a class="logo-wrap" href="index.html">
+    <img src="assets/images/main/emilai-avatar.jpg" alt="Emilia" loading="lazy">
+    <span class="logo-text">EMILIA</span>
+  </a>
+  <nav class="site-nav" dir="ltr">
+    <a href="index.html">Home</a>
+    <a href="games.html" class="active">Games</a>
+    <a href="designers.html">Designers</a>
+  </nav>
+  <div class="nav-controls" dir="ltr">
+    <button class="nav-btn" id="theme-toggle" title="Toggle Theme">🌙</button>
+  </div>
+</header>
+
+<!-- ═══ MUSIC TOGGLE ═══ -->
+<button id="music-toggle" class="muted" title="Toggle Music" dir="ltr">
+  <div class="music-waves">
+    <div class="wave-bar" style="height:8px"></div>
+    <div class="wave-bar" style="height:14px"></div>
+    <div class="wave-bar" style="height:6px"></div>
+  </div>
+</button>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero reveal">
+  <div class="page-hero-label">❆ Public Games on YouTube ❆</div>
+  <h1>Games Vault</h1>
+  <p>𓂃❄️ We welcome you, our little snowflakes — click any game to watch ❄️𓂃</p>
+</section>
+
+<!-- ═══ FILTER BAR ═══ -->
+<div class="filter-bar reveal" dir="ltr" style="transition-delay:0.1s">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="horror">Horror 👻</button>
+  <button class="filter-btn" data-filter="fun">Fun 🎉</button>
+  <button class="filter-btn" data-filter="simulator">Simulator 🎭</button>
+  <button class="filter-btn" data-filter="qa">Q&amp;A 💬</button>
+</div>
+
+<!-- ═══ GAMES GRID ═══ -->
+<section class="games-grid wrap reveal" style="transition-delay:0.2s">
+
+  <div class="game-card" data-youtube="https://youtu.be/2QklP1dowVA?si=_a-QjEdlxCAB4RuU" data-type="horror">
+    <img src="assets/images/games/ALBEDO.webp" alt="ALBEDO" loading="lazy">
+    <div class="game-info"><h3>ALBEDO</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://youtu.be/pApWpVap8TQ?si=tSLll2VaqwZ4AIlU" data-type="horror">
+    <img src="assets/images/games/Lihiman.jpg" alt="Lihiman" loading="lazy">
+    <div class="game-info"><h3>Lihiman</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=EqgecRnK5IA" data-type="horror">
+    <img src="assets/images/games/Nosferatu.jpg" alt="Nosferatu" loading="lazy">
+    <div class="game-info"><h3>Nosferatu</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=s341_VHzDuE" data-type="qa">
+    <img src="assets/images/games/Randoms.jpg" alt="Randoms" loading="lazy">
+    <div class="game-info"><h3>Randoms</h3><span class="game-tag">q&amp;a</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=fthsLVz6LeQ" data-type="horror">
+    <img src="assets/images/games/Soupcosis.jpg" alt="Soupcosis" loading="lazy">
+    <div class="game-info"><h3>Soupcosis</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=asn1xM7luLw" data-type="horror">
+    <img src="assets/images/games/Content Warning.jpg" alt="Content Warning" loading="lazy">
+    <div class="game-info"><h3>Content Warning</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=z131L1j1Tbk" data-type="horror">
+    <img src="assets/images/games/apartment 57.jpg" alt="Apartment 57" loading="lazy">
+    <div class="game-info"><h3>Apartment 57</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=8qTBSbsdkAE" data-type="horror">
+    <img src="assets/images/games/R.E.P.O.jpg" alt="R.E.P.O" loading="lazy">
+    <div class="game-info"><h3>R.E.P.O</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=plESipUXwkc" data-type="simulator">
+    <img src="assets/images/games/Yandere simulator2.jpg" alt="Yandere Simulator #2" loading="lazy">
+    <div class="game-info"><h3>Yandere Simulator #2</h3><span class="game-tag">simulator</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=fWBp35Cqt5w" data-type="horror">
+    <img src="assets/images/games/KiOSK.jpg" alt="KiOSK" loading="lazy">
+    <div class="game-info"><h3>KiOSK</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=5dX169kLBow" data-type="simulator">
+    <img src="assets/images/games/Yandere simulator1.jpg" alt="Yandere Simulator #1" loading="lazy">
+    <div class="game-info"><h3>Yandere Simulator #1</h3><span class="game-tag">simulator</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=XNYRtUGamvI" data-type="horror">
+    <img src="assets/images/games/clap clap.jpg" alt="Clap Clap" loading="lazy">
+    <div class="game-info"><h3>Clap Clap</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=rHOUn2Rb11c" data-type="fun">
+    <img src="assets/images/games/minecraft2.jpg" alt="Minecraft #2" loading="lazy">
+    <div class="game-info"><h3>Minecraft #2</h3><span class="game-tag">fun</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://youtu.be/R1jIukySLJ0" data-type="horror">
+    <img src="assets/images/games/Boil Noodles at Night.jpg" alt="Boil Noodles at Night" loading="lazy">
+    <div class="game-info"><h3>Boil Noodles at Night</h3><span class="game-tag">horror</span></div>
+  </div>
+
+  <div class="game-card" data-youtube="https://www.youtube.com/watch?v=XNYRtUGamvI" data-type="fun">
+    <img src="assets/images/games/minecraft.jpg" alt="Minecraft #1" loading="lazy">
+    <div class="game-info"><h3>Minecraft #1</h3><span class="game-tag">fun</span></div>
+  </div>
+
+</section>
+
+<!-- ═══ EMILIA MASCOT ═══ -->
+<div class="emilia-sprite idle" id="emiliaMascot"></div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <span class="footer-brand">EMILIA</span>
+  VTUBER & ART | تم التصميم خصيصًا &nbsp;|&nbsp; جميع الحقوق محفوظة © 2025
+</footer>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/core.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>
